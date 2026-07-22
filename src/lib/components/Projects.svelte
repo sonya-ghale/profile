@@ -27,7 +27,7 @@
 		<div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
 			{#each projects as project}
 				<article
-					class="rounded-xl border border-white/8 bg-background/60 p-7 transition-colors hover:border-accent/25"
+					class="rounded-xl border border-white/8  p-7 transition-colors hover:border-accent/25"
 				>
 					<h3 class="mb-3 text-xl text-foreground">{project.title}</h3>
 					<p class="mb-4 text-sm leading-relaxed text-muted">{project.description}</p>
