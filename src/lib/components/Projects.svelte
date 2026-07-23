@@ -21,7 +21,7 @@
 	];
 </script>
 
-<section id="projects" class="scroll-mt-16 bg-white/2 py-20">
+<section id="projects" class="scroll-mt-16 bg-[#1A1A1A] py-20 text-[#EEEEEE]">
 	<div class="mx-auto max-w-6xl px-8">
 		<SectionHeading title="Projects" subtitle="Things I've built" />
 		<div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">
@@ -29,8 +29,8 @@
 				<article
 					class="rounded-xl border border-white/8  p-7 transition-colors hover:border-accent/25"
 				>
-					<h3 class="mb-3 text-xl text-foreground">{project.title}</h3>
-					<p class="mb-4 text-sm leading-relaxed text-muted">{project.description}</p>
+					<h3 class="mb-3 text-xl text-[#EEEEEE]">{project.title}</h3>
+					<p class="mb-4 text-sm leading-relaxed text-[#EEEEEE]/60">{project.description}</p>
 					<div class="flex flex-wrap gap-2">
 						{#each project.tags as tag}
 							<span class="rounded-md bg-accent-purple/20 px-2.5 py-1 text-xs text-accent">{tag}</span>

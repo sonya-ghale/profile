@@ -3,6 +3,13 @@
 @theme {
 	--font-sans: 'DM Sans', system-ui, sans-serif;
 	--font-display: 'Playfair Display', serif;
+
+	--color-background: #1a1a1a;
+	--color-foreground: #eeeeee;
+	--color-muted: #9a9a9a;
+	--color-accent: #eeeeee;
+	--color-accent-blue: #b8b8b8;
+	--color-accent-purple: #7c5cbf;
 }
 
 html {
@@ -10,5 +17,5 @@ html {
 }
 
 body {
-	@apply m-0 font-sans  antialiased;
+	@apply m-0 bg-[#EEEEEE] font-sans text-[#1A1A1A] antialiased;
 }

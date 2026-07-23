@@ -14,7 +14,7 @@
 
 <Navbar />
 
-<main>
+<main class="bg-[--color-foreground]">
 	<Hero />
 	<Skills />
 	<Projects />
