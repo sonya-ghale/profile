@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>Sonia — Developer Portfolio</title>
+	<title>Soniya — Developer Portfolio</title>
 </svelte:head>
 
 <Navbar />

@@ -49,9 +49,9 @@
 					<p class="mb-5 text-xl font-semibold text-[#EEEEEE]/70">Full-Stack Developer</p>
 					<div class="flex flex-wrap justify-center gap-4">
 						<a
-							href="#projects"
+							href="#github"
 							class="inline-block rounded-lg bg-gradient-to-br from-accent-purple to-[#5a3d9e] px-6 py-3 text-sm font-semibold text-[#EEEEEE] no-underline shadow-[0_4px_20px_rgba(124,92,191,0.35)] transition-transform hover:-translate-y-0.5"
-							onclick={(e) => scrollToSection(e, '#projects')}
+							onclick={(e) => scrollToSection(e, '#github')}
 						>
 							View My Work
 						</a>
@@ -70,7 +70,7 @@
 				>
 					<img
 						src={heroImage}
-						alt="Sonia — developer portrait"
+						alt="Soniya — developer portrait"
 						class="floating-image h-auto max-w-[260px] object-contain drop-shadow-[0_20px_40px_rgba(124,92,191,0.2)] md:max-w-[380px] lg:max-w-[520px] xl:max-w-[600px]"
 					/>
 				</div>
