@@ -3,5 +3,6 @@ export { default as Hero } from './components/Hero.svelte';
 export { default as Skills } from './components/Skills.svelte';
 export { default as Projects } from './components/Projects.svelte';
 export { default as Resume } from './components/Resume.svelte';
+export { default as Experience } from './components/Experience.svelte';
 export { default as Contact } from './components/Contact.svelte';
 export { default as Footer } from './components/Footer.svelte';

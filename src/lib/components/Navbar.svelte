@@ -3,10 +3,10 @@
 	import { scrollToSection } from '$lib/utils/scroll';
 
 	const navLinks = [
-		// { label: 'Home', href: '#home' },
 		{ label: 'Skills', href: '#skills' },
 		{ label: 'GitHub', href: '#github' },
-		{ label: 'Experience', href: '#resume' },
+		{ label: 'Experience', href: '#experience' },
+		{ label: 'Resume', href: '#resume' },
 		{ label: 'Contact', href: '#contact' }
 	];
 

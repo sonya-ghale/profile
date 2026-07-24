@@ -2,9 +2,9 @@
 	import SectionHeading from './SectionHeading.svelte';
 
 	const links = [
-		{ label: 'hello@example.com', href: 'mailto:hello@example.com' },
-		{ label: 'GitHub', href: 'https://github.com' },
-		{ label: 'LinkedIn', href: 'https://linkedin.com' }
+		{ label: 'ghalesoniya166@gmail.com', href: 'mailto:hello@example.com' },
+		{ label: 'GitHub', href: 'https://github.com/sonya-ghale' },
+		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/soniya-ghale-681b352a1/' }
 	];
 </script>
 

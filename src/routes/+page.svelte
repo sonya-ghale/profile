@@ -3,6 +3,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Skills from '$lib/components/Skills.svelte';
 	import GitHubActivity from '$lib/components/GitHubActivity.svelte';
+	import Experience from '$lib/components/Experience.svelte';
 	import Resume from '$lib/components/Resume.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -19,6 +20,7 @@
 <main class="bg-[--color-foreground]">
 	<Hero />
 	<Skills />
+	<Experience />
 	<GitHubActivity github={data.github} />
 	<Resume />
 	<Contact />
