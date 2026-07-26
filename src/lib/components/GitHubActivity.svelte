@@ -10,7 +10,7 @@
 		if (ratio <= 0.5) return '#5c3d99';
 		if (ratio <= 0.75) return '#7c5cbf';
 		return '#9b6dff';
-	}
+}
 
 	function formatDate(date: string) {
 		return new Date(date).toLocaleDateString('en-US', {
@@ -40,38 +40,6 @@
 				</p>
 			</div>
 		{:else}
-			<div class="mb-12 flex flex-wrap items-center gap-4 rounded-2xl border border-[#1A1A1A]/10 bg-white/70 p-6">
-				<img
-					src={github.avatar_url}
-					alt={github.username}
-					class="h-16 w-16 rounded-full border-2 border-[#7c5cbf]/30"
-				/>
-				<div>
-					<h3 class="text-2xl font-bold">{github.name ?? github.username}</h3>
-					<a
-						href="https://github.com/{github.username}"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="text-sm font-medium text-[#7c5cbf] no-underline hover:underline"
-					>
-						@{github.username}
-					</a>
-				</div>
-				<div class="ml-auto flex flex-wrap gap-6 text-center">
-					<div>
-						<p class="text-2xl font-bold">{github.public_repos}</p>
-						<p class="text-xs uppercase tracking-wide text-[#1A1A1A]/50">Repos</p>
-					</div>
-					<div>
-						<p class="text-2xl font-bold">{github.totalContributions}</p>
-						<p class="text-xs uppercase tracking-wide text-[#1A1A1A]/50">Contributions</p>
-					</div>
-					<div>
-						<p class="text-2xl font-bold">{github.languages.length}</p>
-						<p class="text-xs uppercase tracking-wide text-[#1A1A1A]/50">Languages</p>
-					</div>
-				</div>
-			</div>
 
 			<div class="mb-12 rounded-2xl border border-[#1A1A1A]/10 bg-[#1A1A1A] p-6 text-[#EEEEEE] md:p-8">
 				<div class="mb-4 flex items-center justify-between gap-4">
@@ -106,64 +74,6 @@
 					<span>More</span>
 				</div>
 			</div>
-
-			<!-- Later add it if necessary -->
-			<!-- <div class="mb-12 grid gap-8 lg:grid-cols-2">
-				<div class="rounded-2xl border border-[#1A1A1A]/10 bg-white/70 p-6 md:p-8">
-					<h3 class="mb-6 text-xl font-bold">Top Languages</h3>
-					{#if github.languages.length === 0}
-						<p class="text-sm text-[#1A1A1A]/60">No language data available.</p>
-					{:else}
-						<div class="mb-6 flex h-3 overflow-hidden rounded-full">
-							{#each github.languages as lang}
-								<div
-									class="h-full"
-									style="width: {lang.percentage}%; background-color: {lang.color}"
-									title="{lang.name} {lang.percentage}%"
-								></div>
-							{/each}
-						</div>
-						<ul class="space-y-3">
-							{#each github.languages as lang}
-								<li class="flex items-center justify-between gap-4 text-sm">
-									<div class="flex items-center gap-2">
-										<span class="h-3 w-3 rounded-full" style="background-color: {lang.color}"></span>
-										<span class="font-medium">{lang.name}</span>
-									</div>
-									<span class="text-[#1A1A1A]/60">{lang.percentage}%</span>
-								</li>
-							{/each}
-						</ul>
-					{/if}
-				</div>
-
-				<div class="rounded-2xl border border-[#1A1A1A]/10 bg-white/70 p-6 md:p-8">
-					<h3 class="mb-2 text-xl font-bold">Quick Stats</h3>
-					<p class="mb-6 text-sm text-[#1A1A1A]/60">
-						Overview from your public GitHub profile and repositories.
-					</p>
-					<ul class="space-y-4 text-sm">
-						<li class="flex justify-between border-b border-[#1A1A1A]/10 pb-3">
-							<span class="text-[#1A1A1A]/60">Most used language</span>
-							<span class="font-semibold">{github.languages[0]?.name ?? '—'}</span>
-						</li>
-						<li class="flex justify-between border-b border-[#1A1A1A]/10 pb-3">
-							<span class="text-[#1A1A1A]/60">Top repository</span>
-							<span class="font-semibold">{github.pinnedRepos[0]?.name ?? github.repos[0]?.name ?? '—'}</span>
-						</li>
-						<li class="flex justify-between border-b border-[#1A1A1A]/10 pb-3">
-							<span class="text-[#1A1A1A]/60">Total stars</span>
-							<span class="font-semibold">
-								{github.repos.reduce((sum, repo) => sum + repo.stargazers_count, 0)}
-							</span>
-						</li>
-						<li class="flex justify-between">
-							<span class="text-[#1A1A1A]/60">Active repositories</span>
-							<span class="font-semibold">{github.repos.length}</span>
-						</li>
-					</ul>
-				</div>
-			</div> -->
 
 			<div>
 				<div class="mb-6 flex flex-wrap items-end justify-between gap-4">

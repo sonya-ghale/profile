@@ -12,12 +12,12 @@
 </script>
 
 <svelte:head>
-	<title>Sonia — Developer Portfolio</title>
+	<title>Soniya — Developer Portfolio</title>
 </svelte:head>
 
 <Navbar />
 
-<main class="bg-[--color-foreground]">
+<main class="bg-[--color-foreground] overflow-x-hidden">
 	<Hero />
 	<Skills />
 	<Experience />

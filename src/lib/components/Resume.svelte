@@ -52,14 +52,14 @@
 	];
 </script>
 
-<section id="resume" class="scroll-mt-16 bg-[#EEEEEE] py-20 text-[#1A1A1A] md:py-24">
+<section id="resume" class="bg-[#EEEEEE] py-20 text-[#1A1A1A] md:py-24">
 	<div class="mx-auto max-w-6xl px-6 md:px-10">
 		<div class="mb-12 flex flex-wrap items-end justify-between gap-6">
 			<div>
 				<h2 class="font-display text-4xl font-bold">Resume</h2>
 				<p class="mt-2 text-lg text-[#1A1A1A]/60">Education, experience, and core skills</p>
 			</div>
-			<a
+			<!-- <a
 				href="/resume.pdf"
 				download
 				class="inline-flex items-center gap-2 rounded-lg bg-[#1A1A1A] px-5 py-3 text-sm font-semibold text-[#EEEEEE] no-underline transition-colors hover:bg-[#2a2a2a]"
@@ -73,7 +73,7 @@
 					/>
 				</svg>
 				Download PDF
-			</a>
+			</a> -->
 		</div>
 
 		<div class="grid gap-8 lg:grid-cols-[1fr_1.2fr]">

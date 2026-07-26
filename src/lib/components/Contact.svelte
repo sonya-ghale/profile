@@ -2,7 +2,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 
 	const links = [
-		{ label: 'ghalesoniya166@gmail.com', href: 'mailto:hello@example.com' },
+		{ label: 'ghalesoniya166@gmail.com', href: 'https://mail.google.com/mail/u/0/#inbox?compose=new' },
 		{ label: 'GitHub', href: 'https://github.com/sonya-ghale' },
 		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/soniya-ghale-681b352a1/' }
 	];

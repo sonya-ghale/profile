@@ -170,12 +170,6 @@
 	The languages, frameworks, and tools I use to design and build — hover a tool to see my proficiency.
 </p>
 
-	<a
-	href="/blogs"
-	class="mb-12 inline-block rounded-md border border-[#1A1A1A]/20 px-4 py-1.5 text-sm font-medium text-[#1A1A1A]/80 no-underline transition-colors hover:bg-[#1A1A1A] hover:text-white"
->
-	Read My Blogs
-</a>
 		<div class="relative mx-auto aspect-[16/10] w-full max-w-3xl">
 			<svg
 				class="pointer-events-none absolute inset-0 h-full w-full"
