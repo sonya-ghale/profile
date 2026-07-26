@@ -1,12 +1,16 @@
+import { GITHUB_TOKEN } from '$app/env/private';
 import { fetchGitHubData, type GitHubData } from '$lib/server/github';
-import { getGitHubToken } from '$lib/server/get-github-token';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ platform }) => {
-	const token = getGitHubToken(platform);
+export const prerender = false;
+
+export const load: PageServerLoad = async () => {
+	const token = GITHUB_TOKEN || undefined;
 
 	if (!token) {
-		console.warn('GITHUB_TOKEN not found. Use .env for npm run dev, .dev.vars for wrangler preview, or Cloudflare secrets in production.');
+		console.warn(
+			'GITHUB_TOKEN not found. Use .env for npm run dev, .dev.vars for wrangler preview, or a Worker secret in production.'
+		);
 		return { github: null as GitHubData | null };
 	}
 

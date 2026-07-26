@@ -36,7 +36,8 @@
 			<div class="rounded-xl border border-[#1A1A1A]/10 bg-white/60 p-8 text-center">
 				<p class="text-[#1A1A1A]/70">
 					GitHub data unavailable. Add <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">GITHUB_TOKEN</code>
-					to your <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">.env</code> file.
+					to <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">.env</code> for local dev, or set it as a
+					Cloudflare Worker secret in production.
 				</p>
 			</div>
 		{:else}

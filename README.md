@@ -1,6 +1,6 @@
 # Dev Profile
 
-Personal developer portfolio built with SvelteKit and deployed to Cloudflare Pages.
+Personal developer portfolio built with SvelteKit and deployed to Cloudflare Workers.
 
 ## Setup
 
@@ -22,7 +22,7 @@ npm run dev
 npm run build
 ```
 
-## Preview (Cloudflare locally)
+## Preview (Cloudflare Worker locally)
 
 ```sh
 cp .dev.vars.example .dev.vars
@@ -30,15 +30,20 @@ cp .dev.vars.example .dev.vars
 npm run preview
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare Workers
 
-1. Connect this repository in the Cloudflare dashboard
-2. Build command: `npm run build`
-3. Build output directory: `.svelte-kit/cloudflare`
-4. Add `GITHUB_TOKEN` as an **encrypted** environment variable under **Variables and Secrets**
+Set the runtime secret (not a build-time variable):
 
-Or deploy from your machine:
+```sh
+wrangler secret put GITHUB_TOKEN
+```
+
+Or in the Cloudflare dashboard: **Workers & Pages → dev-profile → Settings → Variables and Secrets → Add → Secret**.
+
+Then deploy:
 
 ```sh
 npm run deploy
 ```
+
+**Important:** Build-time environment variables do not populate `platform.env` at runtime. `GITHUB_TOKEN` must be an encrypted Worker secret.

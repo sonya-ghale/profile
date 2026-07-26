@@ -8,6 +8,9 @@ declare global {
 		}
 		interface Platform {
 			env: Env;
+			ctx: ExecutionContext;
+			caches: CacheStorage;
+			cf?: IncomingRequestCfProperties;
 		}
 	}
 }
