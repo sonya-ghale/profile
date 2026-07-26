@@ -84,13 +84,25 @@ function authHeaders(token: string) {
 	return {
 		Authorization: `Bearer ${token}`,
 		Accept: 'application/vnd.github+json',
-		'X-GitHub-Api-Version': '2022-11-28'
+		'X-GitHub-Api-Version': '2022-11-28',
+		'User-Agent': 'dev-profile'
 	};
+}
+
+async function githubError(res: Response, context: string): Promise<never> {
+	let detail = '';
+	try {
+		const body = await res.json();
+		detail = body?.message ? `: ${body.message}` : '';
+	} catch {
+		// ignore non-JSON bodies
+	}
+	throw new Error(`${context} failed: ${res.status}${detail}`);
 }
 
 async function fetchUser(token: string): Promise<GitHubUser> {
 	const res = await fetch(`${GITHUB_API}/user`, { headers: authHeaders(token) });
-	if (!res.ok) throw new Error(`GitHub user fetch failed: ${res.status}`);
+	if (!res.ok) await githubError(res, 'GitHub user fetch');
 	return res.json();
 }
 
@@ -98,7 +110,7 @@ async function fetchRepos(token: string): Promise<GitHubRepoRaw[]> {
 	const res = await fetch(`${GITHUB_API}/user/repos?per_page=100&sort=updated&type=owner`, {
 		headers: authHeaders(token)
 	});
-	if (!res.ok) throw new Error(`GitHub repos fetch failed: ${res.status}`);
+	if (!res.ok) await githubError(res, 'GitHub repos fetch');
 	return res.json();
 }
 

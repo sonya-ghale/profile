@@ -24,7 +24,8 @@ export const load: PageServerLoad = async ({ platform }) => {
 		const github = await fetchGitHubData(token);
 		return { github, githubError: null };
 	} catch (error) {
-		console.error('Failed to load GitHub data:', error);
+		const message = error instanceof Error ? error.message : String(error);
+		console.error('Failed to load GitHub data:', message);
 		return {
 			github: null as GitHubData | null,
 			githubError: 'api_error' as GitHubLoadError
