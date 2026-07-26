@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { GitHubData } from '$lib/server/github';
+	import type { GitHubLoadError } from '../../routes/+page.server';
 
-	let { github }: { github: GitHubData | null } = $props();
+	let {
+		github,
+		githubError = null
+	}: { github: GitHubData | null; githubError?: GitHubLoadError | null } = $props();
 
 	function contributionColor(count: number, maxCount: number): string {
 		if (count === 0) return '#2a2a35';
@@ -34,11 +38,20 @@
 
 		{#if !github}
 			<div class="rounded-xl border border-[#1A1A1A]/10 bg-white/60 p-8 text-center">
-				<p class="text-[#1A1A1A]/70">
-					GitHub data unavailable. Add <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">GITHUB_TOKEN</code>
-					to <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">.env</code> for local dev, or set it as a
-					Cloudflare Worker secret in production.
-				</p>
+				{#if githubError === 'api_error'}
+					<p class="text-[#1A1A1A]/70">
+						GitHub data unavailable. Your <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">GITHUB_TOKEN</code>
+						was found but rejected by GitHub (expired or invalid). Create a new token at
+						<a href="https://github.com/settings/tokens" class="text-accent-purple underline" target="_blank" rel="noopener noreferrer">github.com/settings/tokens</a>.
+					</p>
+				{:else}
+					<p class="text-[#1A1A1A]/70">
+						GitHub data unavailable. <code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">.env</code> is only for local dev
+						and is not deployed to Cloudflare. For production, run
+						<code class="rounded bg-[#1A1A1A]/5 px-1.5 py-0.5">wrangler secret put GITHUB_TOKEN</code>
+						then redeploy.
+					</p>
+				{/if}
 			</div>
 		{:else}
 

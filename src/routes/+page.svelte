@@ -21,7 +21,7 @@
 	<Hero />
 	<Skills />
 	<Experience />
-	<GitHubActivity github={data.github} />
+	<GitHubActivity github={data.github} githubError={data.githubError} />
 	<Resume />
 	<Contact />
 </main>

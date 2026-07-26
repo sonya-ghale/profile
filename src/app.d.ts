@@ -5,6 +5,7 @@ declare global {
 	namespace App {
 		interface PageData {
 			github: import('$lib/server/github').GitHubData | null;
+			githubError: import('./routes/+page.server').GitHubLoadError | null;
 		}
 		interface Platform {
 			env: Env;
