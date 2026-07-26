@@ -1,42 +1,44 @@
-# sv
+# Dev Profile
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Personal developer portfolio built with SvelteKit and deployed to Cloudflare Pages.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Setup
 
 ```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.16.4 create --template minimal --types ts --install npm ./
+npm install
+cp .env.example .env
+# Add your GitHub token to .env for local development
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+## Build
 
 ```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Preview (Cloudflare locally)
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+cp .dev.vars.example .dev.vars
+# Add GITHUB_TOKEN to .dev.vars
+npm run preview
+```
+
+## Deploy to Cloudflare Pages
+
+1. Connect this repository in the Cloudflare dashboard
+2. Build command: `npm run build`
+3. Build output directory: `.svelte-kit/cloudflare`
+4. Add `GITHUB_TOKEN` as an **encrypted** environment variable under **Variables and Secrets**
+
+Or deploy from your machine:
+
+```sh
+npm run deploy
+```
