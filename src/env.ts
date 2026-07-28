@@ -23,5 +23,17 @@ export const variables = defineEnvVars({
 	GITHUB_TOKEN: {
 		description: 'Optional GitHub personal access token for higher API rate limits',
 		schema: optionalString()
+	},
+	RESEND_API_KEY: {
+		description: 'Resend API key for contact form emails',
+		schema: optionalString()
+	},
+	CONTACT_TO_EMAIL: {
+		description: 'Inbox that receives contact form submissions',
+		schema: optionalString()
+	},
+	CONTACT_FROM_EMAIL: {
+		description: 'Sender shown on contact emails, e.g. Portfolio <hello@yourdomain.com>',
+		schema: optionalString()
 	}
 });
