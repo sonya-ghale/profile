@@ -8,8 +8,8 @@
 	];
 </script>
 
-<section id="contact" class="scroll-mt-16 bg-[#1A1A1A] py-20 text-[#EEEEEE]">
-	<div class="mx-auto max-w-6xl px-8">
+<section id="contact" class="scroll-mt-16 bg-[#1A1A1A] py-16 text-[#EEEEEE] sm:py-20">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
 		<SectionHeading title="Contact" subtitle="Let's work together" />
 		<div class="max-w-lg">
 			<p class="mb-6 text-[#EEEEEE]/60">

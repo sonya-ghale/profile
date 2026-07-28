@@ -11,7 +11,6 @@
 
 	type Skill = {
 		slug: string;
-		level: 'Beginner' | 'Intermediate' | 'Advanced';
 		x: number;
 		y: number;
 		prominent?: boolean;
@@ -22,7 +21,6 @@
 	const skills: Skill[] = [
 		{
 			slug: 'svelte',
-			level: 'Intermediate',
 			x: 44,
 			y: 46,
 			description:
@@ -30,7 +28,6 @@
 		},
 		{
 			slug: 'javascript',
-			level: 'Intermediate',
 			x: 62,
 			y: 32,
 			prominent: true,
@@ -39,7 +36,6 @@
 		},
 		{
 			slug: 'react',
-			level: 'Intermediate',
 			x: 38,
 			y: 28,
 			prominent: true,
@@ -49,7 +45,6 @@
 		},
 		{
 			slug: 'python',
-			level: 'Intermediate',
 			x: 65,
 			y: 48,
 			description:
@@ -58,7 +53,6 @@
 		},
 		{
 			slug: 'django',
-			level: 'Intermediate',
 			x: 42,
 			y: 62,
 			description:
@@ -67,7 +61,6 @@
 		},
 		{
 			slug: 'vscode',
-			level: 'Advanced',
 			x: 88,
 			y: 42,
 			prominent: true,
@@ -77,14 +70,12 @@
 		},
 		{
 			slug: 'cursor',
-			level: 'Advanced',
 			x: 24,
 			y: 49,
 			description:'Used as an AI-assisted code editor to improve development speed, refactor code, and accelerate debugging.'
 		},
 		{
 			slug: 'git',
-			level: 'Advanced',
 			x: 75,
 			y: 68,
 			description:
@@ -92,7 +83,6 @@
 		},
 		{
 			slug: 'mongodb',
-			level: 'Intermediate',
 			x: 22,
 			y: 68,
 			description:
@@ -101,7 +91,6 @@
 		},
 		{
 			slug: 'html',
-			level: 'Advanced',
 			x: 78,
 			y: 28,
 			description: 'Built semantic and accessible page structures as the foundation for responsive web applications.'
@@ -109,7 +98,6 @@
 		},
 		{
 			slug: 'css',
-			level: 'Advanced',
 			x: 19,
 			y: 34,
 			description:
@@ -118,7 +106,6 @@
 		},
 		{
 			slug: 'godot',
-			level: 'Intermediate',
 			x: 58,
 			y: 68,
 			description:
@@ -127,7 +114,6 @@
 		},
 		{
 			slug: 'figma',
-			level: 'Intermediate',
 			x: 8,
 			y: 58,
 			description:
@@ -136,7 +122,6 @@
 		},
 		{
 			slug: 'canva',
-			level: 'Intermediate',
 			x: 82,
 			y: 55,
 			description: 
@@ -144,7 +129,6 @@
 		},
 		{
 			slug: 'clip-studio',
-			level: 'Intermediate',
 			x: 48,
 			y: 80,
 			description: 
@@ -152,7 +136,6 @@
 		},
 		{
 			slug: 'tailwind-css',
-			level: 'Intermediate',
 			x: 100,
 			y: 62,
 			description: 
@@ -163,14 +146,33 @@
 	let hoveredIndex = $state<number | null>(null);
 </script>
 
-<section id="skills" class="scroll-mt-12 bg-[#EEEEEE] px-6 py-10 md:px-10">
+<section id="skills" class="scroll-mt-12 bg-[#EEEEEE] px-4 py-10 sm:px-6 md:px-10">
 	<div class="mx-auto max-w-6xl">
-		<h2 class="font-display mb-2 text-4xl text-[#1A1A1A]">Skills & Tools</h2>
-<p class="mb-4 text-lg text-[#1A1A1A]/60">
-	The languages, frameworks, and tools I use to design and build — hover a tool to see my proficiency.
-</p>
+		<h2 class="font-display mb-2 text-3xl text-[#1A1A1A] sm:text-4xl">Skills & Tools</h2>
+		<p class="mb-6 text-base text-[#1A1A1A]/60 sm:mb-4 sm:text-lg">
+			The languages, frameworks, and tools I use to design and build — tap a tool to see my proficiency.
+		</p>
 
-		<div class="relative mx-auto aspect-[16/10] w-full max-w-3xl">
+		<div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:hidden">
+			{#each skills as skill}
+				<div class="rounded-xl border border-[#1A1A1A]/10 bg-white/80 p-3 sm:p-4">
+					<div class="mb-2 flex items-center gap-2">
+						{#if skill.logo}
+							<img src={skill.logo} alt={skill.slug} class="h-8 w-8 object-contain" />
+						{:else}
+							<span
+								class="flex h-8 w-8 items-center justify-center rounded bg-[#1A1A1A]/5 text-xs font-semibold uppercase text-[#1A1A1A]"
+							>
+								{skill.slug.slice(0, 2)}
+							</span>
+						{/if}
+						<span class="text-xs font-semibold text-[#1A1A1A] uppercase">{skill.slug}</span>
+					</div>
+				</div>
+			{/each}
+		</div>
+
+		<div class="relative mx-auto hidden aspect-[16/10] w-full max-w-3xl md:block">
 			<svg
 				class="pointer-events-none absolute inset-0 h-full w-full"
 				viewBox="0 0 100 100"
@@ -212,9 +214,7 @@
 									{skill.slug.slice(0, 2)}
 								</span>
 							{/if}
-							<span class="text-[clamp(0.65rem,1.1vw,0.85rem)] font-medium text-white/80"
-								>{skill.level}</span
-							>
+						
 						</div>
 						<p class="text-xs leading-snug text-white/80">{skill.description}</p>
 					</div>

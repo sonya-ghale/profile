@@ -85,11 +85,11 @@
 <section
 	id="experience"
 	bind:this={sectionEl}
-	class="career-section relative scroll-mt-16 overflow-hidden bg-[#1A1A1A] py-24 text-[#EEEEEE] md:py-32"
+	class="career-section relative scroll-mt-16 overflow-hidden bg-[#1A1A1A] py-16 text-[#EEEEEE] sm:py-20 md:py-24 lg:py-32"
 >
-	<div class="relative mx-auto max-w-6xl px-6 md:px-10">
+	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
 		<h2
-			class="font-display mb-20 text-center text-4xl font-bold leading-tight text-[#EEEEEE] md:text-5xl lg:text-6xl"
+			class="font-display mb-12 text-center text-3xl font-bold leading-tight text-[#EEEEEE] sm:mb-16 sm:text-4xl md:mb-20 md:text-5xl lg:text-6xl"
 		>
 			My career &amp;
 			<span
@@ -116,7 +116,7 @@
 				</div>
 			</div>
 
-			<div class="flex flex-col gap-16 md:gap-20">
+			<div class="flex flex-col gap-12 sm:gap-16 md:gap-20">
 				{#each timeline as entry, i}
 					<article
 						class="timeline-entry grid grid-cols-1 gap-4 md:grid-cols-[7rem_13rem_1fr] md:gap-x-10 lg:grid-cols-[9rem_15rem_1fr] lg:gap-x-16"

@@ -31,10 +31,10 @@
 	);
 </script>
 
-<section id="github" class="scroll-mt-16 bg-[#EEEEEE] py-20 text-[#1A1A1A] md:py-24">
-	<div class="mx-auto max-w-6xl px-6 md:px-10">
-		<h2 class="font-display mb-2 text-4xl font-bold text-[#1A1A1A]">GitHub Activity</h2>
-		<p class="mb-12 text-lg text-[#1A1A1A]/60">Repositories, contributions, and languages</p>
+<section id="github" class="scroll-mt-16 bg-[#EEEEEE] py-16 text-[#1A1A1A] sm:py-20 md:py-24">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
+		<h2 class="font-display mb-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">GitHub Activity</h2>
+		<p class="mb-8 text-base text-[#1A1A1A]/60 sm:mb-12 sm:text-lg">Repositories, contributions, and languages</p>
 
 		{#if !github}
 			<div class="rounded-xl border border-[#1A1A1A]/10 bg-white/60 p-8 text-center">
@@ -55,10 +55,10 @@
 			</div>
 		{:else}
 
-			<div class="mb-12 rounded-2xl border border-[#1A1A1A]/10 bg-[#1A1A1A] p-6 text-[#EEEEEE] md:p-8">
-				<div class="mb-4 flex items-center justify-between gap-4">
-					<h3 class="text-xl font-bold">Contribution Graph</h3>
-					<span class="text-sm text-[#EEEEEE]/60">{github.totalContributions} contributions in the last year</span>
+			<div class="mb-12 rounded-2xl border border-[#1A1A1A]/10 bg-[#1A1A1A] p-4 text-[#EEEEEE] sm:p-6 md:p-8">
+				<div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+					<h3 class="text-lg font-bold sm:text-xl">Contribution Graph</h3>
+					<span class="text-xs text-[#EEEEEE]/60 sm:text-sm">{github.totalContributions} contributions in the last year</span>
 				</div>
 
 				<div class="overflow-x-auto pb-2">
