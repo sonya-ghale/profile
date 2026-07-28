@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>Soniya — Developer Portfolio</title>
+	<title>Soniya — Portfolio</title>
 </svelte:head>
 
 <Navbar />
