@@ -13,8 +13,8 @@
 
 <Navbar />
 
-<main class="bg-[#EEEEEE] min-h-screen">
-	<article class="mx-auto max-w-3xl px-4 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-14 md:px-8">
+<main class="min-h-screen bg-[#EEEEEE] pt-32 sm:pt-28">
+	<article class="mx-auto max-w-3xl px-4 pb-10 sm:px-6 sm:pb-12 md:px-8">
 		<a
 			href="/#blogs"
 			class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A]/60 no-underline transition-colors hover:text-accent-purple"

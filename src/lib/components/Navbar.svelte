@@ -22,12 +22,11 @@
 
 	let scrolled = $state(false);
 
+	const isHome = $derived(page.url.pathname === '/');
+	const navSolid = $derived(!isHome || scrolled);
+
 	const navLinkClass = $derived(
-		scrolled
-			? 'text-muted hover:text-accent'
-			: page.url.pathname === '/'
-				? 'text-[#EEEEEE] hover:text-accent-purple'
-				: 'text-muted hover:text-accent-purple'
+		navSolid ? 'text-[#EEEEEE]/85 hover:text-accent-purple' : 'text-[#EEEEEE] hover:text-accent-purple'
 	);
 
 	function handleScroll() {
@@ -43,25 +42,41 @@
 
 <nav
 	class="fixed inset-x-0 top-0 z-50 px-4 py-3 transition-colors duration-300 sm:px-6 md:px-8 md:py-4"
-	style="background-color: {scrolled ? '#000000' : 'transparent'};"
+	style="background-color: {navSolid ? '#000000' : 'transparent'};"
 >
-	<div class="mx-auto flex max-w-6xl flex-col items-center gap-3 sm:gap-4 md:flex-row md:items-center md:justify-between">
-		<a href="/" class="self-start no-underline md:self-auto" aria-label="Home">
-			<div
-				class="rounded-xl bg-gradient-to-br from-accent-purple to-[#5a3d9e] px-4 py-2 font-display text-lg font-bold tracking-tight text-[#EEEEEE] shadow-[0_4px_16px_rgba(124,92,191,0.35)] transition-transform hover:-translate-y-0.5 sm:text-xl"
-			>
-				SG
-			</div>
-		</a>
+	<div class="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
+		<div class="flex items-center justify-between gap-4 md:shrink-0">
+			<a href="/" class="no-underline" aria-label="Home">
+				<div
+					class="rounded-xl bg-gradient-to-br from-accent-purple to-[#5a3d9e] px-4 py-2 font-display text-lg font-bold tracking-tight text-[#EEEEEE] shadow-[0_4px_16px_rgba(124,92,191,0.35)] transition-transform hover:-translate-y-0.5 sm:text-xl"
+				>
+					SG
+				</div>
+			</a>
 
-		<ul
-			class="m-0 flex list-none flex-wrap justify-center gap-x-4 gap-y-2 p-0 sm:gap-x-5 md:gap-8"
-		>
-			{#each navLinksLeft as link}
-				<li>
+			<div class="flex items-center gap-4 md:hidden">
+				{#each navLinksRight as link}
 					<a
 						href={link.href}
-						class="text-sm font-semibold uppercase tracking-wide no-underline transition-colors sm:text-base {navLinkClass}"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center no-underline transition-colors {navLinkClass}"
+						aria-label={link.label}
+					>
+						{@html link.svg}
+					</a>
+				{/each}
+			</div>
+		</div>
+
+		<ul
+			class="m-0 flex list-none gap-x-4 gap-y-2 overflow-x-auto overscroll-x-contain pb-1 [-ms-overflow-style:none] [scrollbar-width:none] md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden"
+		>
+			{#each navLinksLeft as link}
+				<li class="shrink-0">
+					<a
+						href={link.href}
+						class="text-sm font-semibold uppercase tracking-wide whitespace-nowrap no-underline transition-colors sm:text-base {navLinkClass}"
 						onclick={(e) => scrollToSection(e, link.href)}
 					>
 						{link.label}
@@ -70,7 +85,7 @@
 			{/each}
 		</ul>
 
-		<div class="flex items-center gap-4 sm:gap-5 sm:items-right">
+		<div class="hidden items-center gap-4 md:flex md:shrink-0">
 			{#each navLinksRight as link}
 				<a
 					href={link.href}
@@ -80,7 +95,7 @@
 					aria-label={link.label}
 				>
 					{@html link.svg}
-					<span class="hidden sm:inline">{link.label}</span>
+					<span class="hidden lg:inline">{link.label}</span>
 				</a>
 			{/each}
 		</div>
