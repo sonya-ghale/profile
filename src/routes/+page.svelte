@@ -5,6 +5,7 @@
 	import GitHubActivity from '$lib/components/GitHubActivity.svelte';
 	import Experience from '$lib/components/Experience.svelte';
 	import Resume from '$lib/components/Resume.svelte';
+	import Blogs from '$lib/components/Blogs.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
@@ -23,6 +24,7 @@
 	<Experience />
 	<GitHubActivity github={data.github} githubError={data.githubError} />
 	<Resume />
+	<Blogs />
 	<Contact />
 </main>
 

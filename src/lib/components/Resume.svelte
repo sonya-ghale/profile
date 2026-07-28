@@ -17,9 +17,9 @@
 	];
 </script>
 
-<section id="resume" class="bg-[#EEEEEE] py-16 text-[#1A1A1A] sm:py-20 md:py-24">
+<section id="resume" class="section-padding scroll-mt-16 bg-[#EEEEEE] text-[#1A1A1A]">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
-		<div class="mb-10 flex flex-wrap items-end justify-between gap-4 sm:mb-12 sm:gap-6">
+		<div class="mb-6 flex flex-wrap items-end justify-between gap-4 sm:gap-6">
 			<div>
 				<h2 class="font-display text-3xl font-bold sm:text-4xl">Resume</h2>
 				<p class="mt-2 text-lg text-[#1A1A1A]/60">Education, certification, and curriculum vitae</p>

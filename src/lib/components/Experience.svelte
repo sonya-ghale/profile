@@ -85,7 +85,7 @@
 <section
 	id="experience"
 	bind:this={sectionEl}
-	class="career-section relative scroll-mt-16 overflow-hidden bg-[#1A1A1A] py-16 text-[#EEEEEE] sm:py-20 md:py-24 lg:py-32"
+	class="career-section section-padding relative scroll-mt-16 overflow-hidden bg-[#1A1A1A] text-[#EEEEEE]"
 >
 	<div class="relative mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
 		<h2

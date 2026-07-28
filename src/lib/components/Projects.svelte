@@ -21,7 +21,7 @@
 	];
 </script>
 
-<section id="projects" class="scroll-mt-16 bg-[#1A1A1A] py-20 text-[#EEEEEE]">
+<section id="projects" class="section-padding scroll-mt-16 bg-[#1A1A1A] text-[#EEEEEE]">
 	<div class="mx-auto max-w-6xl px-8">
 		<SectionHeading title="Projects" subtitle="Things I've built" />
 		<div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6">

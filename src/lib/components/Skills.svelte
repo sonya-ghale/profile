@@ -178,7 +178,7 @@
 	}
 </script>
 
-<section id="skills" class="scroll-mt-12 bg-[#EEEEEE] px-4 py-10 sm:px-6 md:px-10">
+<section id="skills" class="section-padding scroll-mt-16 bg-[#EEEEEE] px-4 sm:px-6 md:px-10">
 	<div class="mx-auto max-w-6xl">
 		<h2 class="font-display mb-2 text-3xl text-[#1A1A1A] sm:text-4xl">Skills & Tools</h2>
 		<p class="mb-4 text-base text-[#1A1A1A]/60 sm:text-lg">

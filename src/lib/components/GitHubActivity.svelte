@@ -31,7 +31,7 @@
 	);
 </script>
 
-<section id="github" class="scroll-mt-16 bg-[#EEEEEE] py-16 text-[#1A1A1A] sm:py-20 md:py-24">
+<section id="github" class="section-padding scroll-mt-16 bg-[#EEEEEE] text-[#1A1A1A]">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 md:px-10">
 		<h2 class="font-display mb-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">GitHub Activity</h2>
 		<p class="mb-8 text-base text-[#1A1A1A]/60 sm:mb-12 sm:text-lg">Repositories, contributions, and languages</p>

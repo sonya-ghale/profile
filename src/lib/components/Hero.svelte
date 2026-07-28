@@ -37,9 +37,9 @@
 	let textOpacity = $derived(isMobile ? 1 : Math.max(1 - scrollY / 500, 0));
 </script>
 
-<div class="bg-[#EEEEEE] lg:p-1">
+<div class="bg-[#EEEEEE]">
 	<header
-		class="scan-section relative mx-auto flex min-h-screen w-full max-w-[113rem] flex-col overflow-hidden bg-[#1A1A1A] text-[#EEEEEE] lg:min-h-[calc(100dvh-8px)]"
+		class="scan-section relative mx-auto flex min-h-screen w-full  flex-col overflow-hidden bg-[#1A1A1A] text-[#EEEEEE] lg:min-h-[calc(100dvh-8px)]"
 	>
 		<section id="home" class="relative flex flex-1 items-center justify-center px-4 py-28 sm:px-6 md:px-8 md:py-20">
 			<div
