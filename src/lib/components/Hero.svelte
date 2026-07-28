@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import heroImage from '$lib/assets/gglasses-removebg-preview.png';
+	import heroImage from '$lib/assets/face.jpg';
 	import { scrollToSection } from '$lib/utils/scroll';
 
 	let scrollY = $state(0);
@@ -81,7 +81,7 @@
 					<img
 						src={heroImage}
 						alt="Soniya — developer portrait"
-						class="floating-image h-auto w-full max-w-[220px] object-contain drop-shadow-[0_20px_40px_rgba(124,92,191,0.2)] sm:max-w-[280px] md:max-w-[380px] lg:max-w-[520px] xl:max-w-[600px]"
+						class="floating-image h-auto w-full rounded-md max-w-[280px] object-contain drop-shadow-[0_20px_40px_rgba(124,92,191,0.2)] sm:max-w-[250px] md:max-w-[280px] lg:max-w-[280px] xl:max-w-[280px]"
 					/>
 				</div>
 			</div>

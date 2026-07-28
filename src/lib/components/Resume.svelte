@@ -4,23 +4,16 @@
 	const education = [
 		{
 			year: '2025',
-			degree: 'Formal Education',
+			degree: 'Bachelors',
 			institution: 'Completed',
-			details: 'Finished formal education with a focus on software development and web technologies.'
+			details: 'Finished Bachelor in Computer Application with a focus on software development and web technologies.'
 		}
 	];
 
-	const skills = [
-		'JavaScript',
-		'TypeScript',
-		'Svelte',
-		'React',
-		'Python',
-		'Django',
-		'HTML',
-		'CSS',
-		'Git',
-		'MongoDB'
+	const certifications = [
+		"Frontend Developer Internship in Maharudra",
+		"Full Stack Development Internship in GLC Education",
+		"React Training Program Completion Certificate"
 	];
 </script>
 
@@ -29,7 +22,7 @@
 		<div class="mb-10 flex flex-wrap items-end justify-between gap-4 sm:mb-12 sm:gap-6">
 			<div>
 				<h2 class="font-display text-3xl font-bold sm:text-4xl">Resume</h2>
-				<p class="mt-2 text-lg text-[#1A1A1A]/60">Education, skills, and curriculum vitae</p>
+				<p class="mt-2 text-lg text-[#1A1A1A]/60">Education, certification, and curriculum vitae</p>
 			</div>
 		</div>
 
@@ -48,11 +41,11 @@
 				</div>
 
 				<div class="rounded-2xl border border-[#1A1A1A]/10 bg-white/70 p-6 md:p-8">
-					<h3 class="mb-5 text-xl font-bold">Core Skills</h3>
+					<h3 class="mb-5 text-xl font-bold">Certifications</h3>
 					<div class="flex flex-wrap gap-2">
-						{#each skills as skill}
+						{#each certifications as certification}
 							<span class="rounded-full bg-[#1A1A1A]/5 px-3 py-1.5 text-sm font-medium text-[#1A1A1A]/80">
-								{skill}
+								{certification}
 							</span>
 						{/each}
 					</div>

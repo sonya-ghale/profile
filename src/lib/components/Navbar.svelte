@@ -51,7 +51,7 @@
 			{/each}
 		</ul>
 
-		<div class="flex items-center gap-4 sm:gap-5">
+		<div class="flex items-center gap-4 sm:gap-5 sm:items-right">
 			{#each navLinksRight as link}
 				<a
 					href={link.href}

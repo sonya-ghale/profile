@@ -18,24 +18,17 @@
 		},
 		{
 			year: '2025',
+			title: 'Education',
+			subtitle: 'Completed',
+			description:
+				'Finished my formal education in 2025 with a strong foundation in software development, web technologies.'
+		},
+		{
+			year: '2025',
 			title: 'Frontend Developer',
 			subtitle: 'Hinomaru Technology',
 			description:
 				'Joined Hinomaru Technology as a Frontend Developer and quickly moved into full-stack responsibilities while contributing to production features.'
-		},
-		{
-			year: '2025',
-			title: 'Education',
-			subtitle: 'Completed',
-			description:
-				'Finished my formal education in 2025 with a strong foundation in software development, web technologies, and practical engineering skills.'
-		},
-		{
-			year: '2024',
-			title: 'Frontend Developer Intern',
-			subtitle: 'Maharudra',
-			description:
-				'Interned as a Frontend Developer at Maharudra, working on UI implementation, responsive layouts, and collaborating with the team on client-facing web experiences.'
 		},
 		{
 			year: '2024',
@@ -43,6 +36,13 @@
 			subtitle: 'GLC Education',
 			description:
 				'Completed a Full Stack Development internship at GLC Education, gaining hands-on experience across frontend, backend, and project delivery.'
+		},
+		{
+			year: '2024',
+			title: 'Frontend Developer Intern',
+			subtitle: 'Maharudra',
+			description:
+				'Interned as a Frontend Developer at Maharudra, working on UI implementation, responsive layouts, and collaborating with the team on client-facing web experiences.'
 		}
 	];
 
